@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\APnDP(4902)\\se07101_asp_net_mvc-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33CAEF0A-F57B-44B8-8718-0B0B406DF577}|WebSIMS\\WebSIMS.csproj|d:\\apndp(4902)\\se07101_asp_net_mvc-main\\websims\\bdcontext\\simsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CAEF0A-F57B-44B8-8718-0B0B406DF577}|WebSIMS\\WebSIMS.csproj|solutionrelative:websims\\bdcontext\\simsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CAEF0A-F57B-44B8-8718-0B0B406DF577}|WebSIMS\\WebSIMS.csproj|d:\\apndp(4902)\\se07101_asp_net_mvc-main\\websims\\bdcontext\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CAEF0A-F57B-44B8-8718-0B0B406DF577}|WebSIMS\\WebSIMS.csproj|solutionrelative:websims\\bdcontext\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CAEF0A-F57B-44B8-8718-0B0B406DF577}|WebSIMS\\WebSIMS.csproj|d:\\apndp(4902)\\se07101_asp_net_mvc-main\\websims\\bdcontext\\entities\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CAEF0A-F57B-44B8-8718-0B0B406DF577}|WebSIMS\\WebSIMS.csproj|solutionrelative:websims\\bdcontext\\entities\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Users.cs",
+              "DocumentMoniker": "D:\\APnDP(4902)\\se07101_asp_net_mvc-main\\WebSIMS\\BDContext\\Entities\\Users.cs",
+              "RelativeDocumentMoniker": "WebSIMS\\BDContext\\Entities\\Users.cs",
+              "ToolTip": "D:\\APnDP(4902)\\se07101_asp_net_mvc-main\\WebSIMS\\BDContext\\Entities\\Users.cs",
+              "RelativeToolTip": "WebSIMS\\BDContext\\Entities\\Users.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T03:52:05.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SIMSDBContext.cs",
+              "DocumentMoniker": "D:\\APnDP(4902)\\se07101_asp_net_mvc-main\\WebSIMS\\BDContext\\SIMSDBContext.cs",
+              "RelativeDocumentMoniker": "WebSIMS\\BDContext\\SIMSDBContext.cs",
+              "ToolTip": "D:\\APnDP(4902)\\se07101_asp_net_mvc-main\\WebSIMS\\BDContext\\SIMSDBContext.cs",
+              "RelativeToolTip": "WebSIMS\\BDContext\\SIMSDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T03:47:53.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Courses.cs",
+              "DocumentMoniker": "D:\\APnDP(4902)\\se07101_asp_net_mvc-main\\WebSIMS\\BDContext\\Entities\\Courses.cs",
+              "RelativeDocumentMoniker": "WebSIMS\\BDContext\\Entities\\Courses.cs",
+              "ToolTip": "D:\\APnDP(4902)\\se07101_asp_net_mvc-main\\WebSIMS\\BDContext\\Entities\\Courses.cs",
+              "RelativeToolTip": "WebSIMS\\BDContext\\Entities\\Courses.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T03:43:42.676Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
