@@ -3,3 +3,4 @@
 /.vs/WebSIMS/FileContentIndex
 /WebSIMS/obj
 WebSIMS/obj/WebSIMS.csproj.nuget.dgspec.json
+WebSIMS/obj/Debug/net8.0/WebSIMS.GeneratedMSBuildEditorConfig.editorconfig
