@@ -15,6 +15,13 @@ namespace WebSIMS
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddAuthentication("CookieAuth")
+                .AddCookie("CookieAuth", options =>
+                {
+                    options.Cookie.Name = "CookieAuth";
+                    options.LoginPath = "/Login/Index";
+                });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -30,6 +37,7 @@ namespace WebSIMS
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

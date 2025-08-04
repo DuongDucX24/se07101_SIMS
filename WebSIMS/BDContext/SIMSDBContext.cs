@@ -7,7 +7,8 @@ namespace WebSIMS.BDContext
     {
         public SIMSDBContext(DbContextOptions<SIMSDBContext> options) : base(options) { }
 
-        public DbSet<Courses> CoursesDb { get; set; }
-        public DbSet<Users> UsersDb { get; set; }
+        public DbSet<Courses> Courses { get; set; }
+        public DbSet<Users> Users { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }

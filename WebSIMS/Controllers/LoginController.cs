@@ -1,10 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebSIMS.Models;
+using WebSIMS.BDContext;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
 
 namespace WebSIMS.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly SIMSDBContext _context;
+
+        public LoginController(SIMSDBContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -16,14 +26,22 @@ namespace WebSIMS.Controllers
         {
             if (ModelState.IsValid)
             {
-                // khong co loi
-                string email = model.Email.Trim();
-                string password = model.Password.Trim();
-                if (email.Equals("trieunt@gmail.com") && password.Equals("12345"))
+                var user = _context.Users.FirstOrDefault(u => u.Username == model.Email);
+
+                if (user != null && BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
                 {
-                    // thanh cong - di vao Dashboard
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, user.Username),
+                        new Claim(ClaimTypes.Role, user.Role),
+                    };
+
+                    var claimsIdentity = new ClaimsIdentity(claims, "CookieAuth");
+                    var authProperties = new AuthenticationProperties();
+
+                    await HttpContext.SignInAsync("CookieAuth", new ClaimsPrincipal(claimsIdentity), authProperties);
+
                     return RedirectToAction("Index", "Dashboard");
-                    
                 }
                 else
                 {
@@ -36,8 +54,8 @@ namespace WebSIMS.Controllers
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
+            await HttpContext.SignOutAsync("CookieAuth");
             return RedirectToAction("Index", "Login");
         }
-
     }
 }
