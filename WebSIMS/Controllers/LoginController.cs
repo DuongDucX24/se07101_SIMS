@@ -3,6 +3,7 @@ using WebSIMS.Models;
 using WebSIMS.BDContext;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
+using WebSIMS.BDContext.Entities;
 
 namespace WebSIMS.Controllers
 {
@@ -56,6 +57,35 @@ namespace WebSIMS.Controllers
         {
             await HttpContext.SignOutAsync("CookieAuth");
             return RedirectToAction("Index", "Login");
+        }
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new Users
+                {
+                    Username = model.Email,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                    Role = model.Role,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+
+            return View(model);
         }
     }
 }

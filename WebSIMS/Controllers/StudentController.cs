@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebSIMS.BDContext;
 using WebSIMS.BDContext.Entities;
 
 namespace WebSIMS.Controllers
 {
+    [Authorize(Roles = "Admin,Faculty")]
     public class StudentController : Controller
     {
         private readonly SIMSDBContext _context;
@@ -20,6 +22,7 @@ namespace WebSIMS.Controllers
         }
 
         // GET: Student/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -28,6 +31,7 @@ namespace WebSIMS.Controllers
         // POST: Student/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create([Bind("FirstName,LastName,DateOfBirth,Email,EnrollmentDate")] Student student)
         {
             if (ModelState.IsValid)
